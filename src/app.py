@@ -4,7 +4,11 @@ app = flask(__name__)
 
 @app.route('/')
 def index():
-    return "Yamir dice adios"
+    return "Adios"
+
+@app.route('/hello')
+def greating():
+    return "Yamir dice hola"
 
 @app.route('/sum/<int:a>/<int:b>')
 def sum(a:int,b:int):
